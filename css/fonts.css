@@ -1,0 +1,13 @@
+
+/* Header 'Anima' fonts */
+@font-face{
+    font-family:Lobster-Regular;
+    src: url(/fonts/Lobster-Regular.ttf);
+}
+
+/* Author's sign in footer font */
+@font-face{
+    font-family: Oswald-VariableFont_wght;
+    src: url(/fonts/Oswald-VariableFont_wght.ttf);
+}
+

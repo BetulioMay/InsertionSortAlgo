@@ -41,6 +41,12 @@ body{
 
 
 
+/* Number input */
+
+#element_input{
+    margin-top: 200px;
+}
+
 /* Footer's styles*/
 
 .footer{

@@ -1,7 +1,11 @@
 
 class arrayElement{
-    constructor(e=0){
-        this.e = e;
+    constructor(e){
+        if(e==""){
+            this.e = "0";
+        }else{
+            this.e = e
+        }
     }
 
     getElement(){

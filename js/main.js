@@ -7,6 +7,7 @@ $(document).ready(function() {
     var arr = [];
 
     btn_submit = $('#btn_submit');
+    btn_reset = $('#btn_reset');
     btn_sort = $('#btn_sort');
     input = $('#element_input');
 
@@ -25,6 +26,18 @@ $(document).ready(function() {
             console.log(arr);
         }
     })
+    btn_reset.click(function() {
+        if(arr.length > 0){
+            arr = [];
+            console.log("The array is empty");
+            console.log(arr);
+        }else{
+            console.log("The array is already empty");
+            console.log(arr);
+        }
+    })
+
+
 
 
 

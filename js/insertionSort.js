@@ -9,7 +9,7 @@ function insertionSort(arr) {
         clave = i;
 
         for(let j = i-1; j >= 0; j--) {
-            if(arr[clave].getElement() <= arr[j].getElement()) {
+            if(parseInt(arr[clave].getElement()) <= parseInt(arr[j].getElement())) {
                 aux = arr[clave].getElement();
                 arr[clave].setElement(arr[j].getElement());
                 arr[j].setElement(aux);

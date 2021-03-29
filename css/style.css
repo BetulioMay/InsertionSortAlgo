@@ -3,6 +3,51 @@ body{
     background-color: rgb(9, 9, 61,1);
 }
 
+/* ----------------------------------------- */
+/* Keyframes */
+/* ----------------------------------------- */
+
+@keyframes addItem {
+    from {
+        font-size: 100px;
+        width: 130px;
+        height: 130px;
+    }
+    to {
+        font-size: 70px;
+        width: 100px;
+        height: 100px;
+    }
+}
+@keyframes mouseOn{
+    0%{
+        font-size: 70px;
+        width: 100px;
+        height: 100px;
+    }
+    50%{
+        font-size: 100px;
+        width: 130px;
+        height: 130px;
+    }
+    100%{
+        font-size: 70px;
+        width: 100px;
+        height: 100px;
+    }
+}
+@keyframes clearItem{
+    from{font-size: 70px;
+        width: 100px;
+        height: 100px;
+    }
+    to{
+        font-size: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
 
 /* Header's styles */
 
@@ -62,6 +107,13 @@ body{
     width: 100px;
     height: 100px;
     background-color: yellow;
+
+    animation: addItem 0.5s forwards;
+
+}
+
+.flex-item:hover{
+    animation: mouseOn 1s ease;
 }
 
 /* Footer's styles*/

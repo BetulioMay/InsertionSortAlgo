@@ -22,6 +22,7 @@ function insertionSort(arr) {
 }
 
 function addElementToContainer(number){
+
     let new_element = document.createElement("div");
 
     new_element.setAttribute("class", "flex-item");        
@@ -30,7 +31,11 @@ function addElementToContainer(number){
 }
 
 function clearContainer(parent){
-    while(parent.firstChild){
-        parent.removeChild(parent.firstChild);
-    }
+    
+    $('.flex-item').fadeOut('fast');
+    setTimeout(function(){
+        while(parent.firstChild){
+            parent.removeChild(parent.firstChild);
+        }
+    },1000);
 }

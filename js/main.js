@@ -38,11 +38,15 @@ $(document).ready(function() {
             clearContainer(container);
             console.log("The array is empty");
             console.log(arr);
+
         }else{
             console.log("The array is already empty");
             console.log(arr);
         }
-    })
+    });
+
+
+
 
     
     // btn_add.addEventListener('click', function() {

@@ -20,3 +20,17 @@ function insertionSort(arr) {
 
     }
 }
+
+function addElementToContainer(number){
+    let new_element = document.createElement("div");
+
+    new_element.setAttribute("class", "flex-item");        
+    new_element.innerHTML = number.toString();
+    document.querySelector(".flex-container").append(new_element);
+}
+
+function clearContainer(parent){
+    while(parent.firstChild){
+        parent.removeChild(parent.firstChild);
+    }
+}

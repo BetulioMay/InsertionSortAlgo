@@ -44,7 +44,24 @@ body{
 /* Number input */
 
 #element_input{
-    margin-top: 200px;
+    margin-top: 50px;
+}
+
+/* Container */
+
+.flex-container{
+    display: flex;
+    margin-top: 100px;
+    height: 130px;
+}
+
+.flex-item{
+    font-size:70px;
+    margin: 15px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
 }
 
 /* Footer's styles*/

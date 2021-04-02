@@ -7,17 +7,27 @@ function insertionSort(arr) {
     for(let i = 1; i < arr.length; i++) {
 
         clave = i;
+        let mainElement = document.getElementById(clave);
 
         for(let j = i-1; j >= 0; j--) {
             if(parseInt(arr[clave].getElement()) <= parseInt(arr[j].getElement())) {
+
+                let secondaryElement = document.getElementById(j);
+
                 aux = arr[clave].getElement();
+                aux_order = mainElement.style.order;
+                
+
                 arr[clave].setElement(arr[j].getElement());
+                changeOrder(mainElement, secondaryElement.style.order);
+                
                 arr[j].setElement(aux);
+                changeOrder(secondaryElement, aux_order);
+
 
                 clave--;
             }
         }
-
     }
 }
 
@@ -29,7 +39,7 @@ function addElementToContainer(number, arr){
     new_element.innerHTML = number.toString();
 
     setOrder(new_element, arr);
-    new_element.setAttribute("id", arr.length-1 + "");
+    new_element.setAttribute("id", new_element.style.order);
 
     document.querySelector(".flex-container").append(new_element);
 }
@@ -49,6 +59,20 @@ function setOrder(element, arr){
 }
 
 
-function changeOrder(element, arr, index){
-    $(element).css('order', arr[index]);
+function changeOrder(element, newOrder){
+
+    let order_prom = new Promise(function(resolve, reject){
+        resolve();
+        reject();
+    })
+
+    order_prom.then(function(){
+
+        element.style.order = newOrder;
+        element.setAttribute('id', element.style.order);
+
+    }).catch(function(err){
+        console.error(err);
+    });
+
 }

@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     btn_submit.click(function() {
         value = input.val();
-
+        
         if(value == "" || value == null){
             console.log("Please, insert a number");
         }else{
@@ -22,16 +22,18 @@ $(document).ready(function() {
             arr.push(new_element);
             addElementToContainer(value, arr);
         }
-
+        
         input.val("");
     });
-
+    
     btn_sort.click(function() {
         if(arr.length > 0){
             insertionSort(arr);
             console.log(arr);
         }
-
+        else{
+            console.log("Array is empty");
+        }
         
     });
     btn_reset.click(function() {
@@ -46,6 +48,7 @@ $(document).ready(function() {
             console.log(arr);
         }
     });
+
 
 
 

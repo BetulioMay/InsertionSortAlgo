@@ -4,7 +4,7 @@ class arrayElement{
         if(e==""){
             this.e = "0";
         }else{
-            this.e = e
+            this.e = e;
         }
     }
 

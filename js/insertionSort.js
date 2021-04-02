@@ -21,12 +21,16 @@ function insertionSort(arr) {
     }
 }
 
-function addElementToContainer(number){
+function addElementToContainer(number, arr){
 
     let new_element = document.createElement("div");
 
     new_element.setAttribute("class", "flex-item");        
     new_element.innerHTML = number.toString();
+
+    setOrder(new_element, arr);
+    new_element.setAttribute("id", arr.length-1 + "");
+
     document.querySelector(".flex-container").append(new_element);
 }
 
@@ -38,4 +42,13 @@ function clearContainer(parent){
             parent.removeChild(parent.firstChild);
         }
     },1000);
+}
+
+function setOrder(element, arr){
+    $(element).css('order', arr.length-1);
+}
+
+
+function changeOrder(element, arr, index){
+    $(element).css('order', arr[index]);
 }

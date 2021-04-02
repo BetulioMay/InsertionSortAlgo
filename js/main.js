@@ -20,7 +20,7 @@ $(document).ready(function() {
         }else{
             new_element = new arrayElement(value);
             arr.push(new_element);
-            addElementToContainer(value);
+            addElementToContainer(value, arr);
         }
 
         input.val("");
@@ -31,7 +31,9 @@ $(document).ready(function() {
             insertionSort(arr);
             console.log(arr);
         }
-    })
+
+        
+    });
     btn_reset.click(function() {
         if(arr.length > 0){
             arr = [];

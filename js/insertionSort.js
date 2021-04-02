@@ -1,34 +1,47 @@
 
-
 function insertionSort(arr) {
     var aux;
     var clave;
+
+    var mainElement;
+    var secondaryElement;
+
+
+    $('.flex-item').toggle('fast');
+
+
+    setTimeout(function(){
+        for(let i = 1; i < arr.length; i++) {
     
-    for(let i = 1; i < arr.length; i++) {
-
-        clave = i;
-        let mainElement = document.getElementById(clave);
-
-        for(let j = i-1; j >= 0; j--) {
-            if(parseInt(arr[clave].getElement()) <= parseInt(arr[j].getElement())) {
-
-                let secondaryElement = document.getElementById(j);
-
-                aux = arr[clave].getElement();
-                aux_order = mainElement.style.order;
-                
-
-                arr[clave].setElement(arr[j].getElement());
-                changeOrder(mainElement, secondaryElement.style.order);
-                
-                arr[j].setElement(aux);
-                changeOrder(secondaryElement, aux_order);
-
-
-                clave--;
+            clave = i;
+            
+            for(let j = i-1; j >= 0; j--) {
+                if(parseInt(arr[clave].getElement()) <= parseInt(arr[j].getElement())) {
+                    
+                    mainElement = document.getElementById(clave);
+                    secondaryElement = document.getElementById(j);
+    
+        
+                    aux = arr[clave].getElement();
+                    aux_order = mainElement.style.order;
+                        
+        
+                    arr[clave].setElement(arr[j].getElement());
+                    changeOrder(mainElement, secondaryElement.style.order);
+                        
+                    arr[j].setElement(aux);
+                    changeOrder(secondaryElement, aux_order);
+        
+        
+                    clave--;
+    
+                }
             }
         }
-    }
+        $('.flex-item').toggle('fast');
+    }, 500);
+
+    
 }
 
 function addElementToContainer(number, arr){
@@ -61,18 +74,34 @@ function setOrder(element, arr){
 
 function changeOrder(element, newOrder){
 
-    let order_prom = new Promise(function(resolve, reject){
-        resolve();
-        reject();
-    })
+    // let order_prom = new Promise(function(resolve, reject){
+    //     resolve();
+    //     reject();
+    // })
 
-    order_prom.then(function(){
+    // order_prom.then(function(){
 
-        element.style.order = newOrder;
-        element.setAttribute('id', element.style.order);
+    //     // setTimeout(function(){
+    //         element.style.order = newOrder;
+    //         element.setAttribute('id', element.style.order);
+    //     // }, 1000);
 
-    }).catch(function(err){
-        console.error(err);
-    });
+    // }).catch(function(err){
+    //     console.error(err);
+    // });
+
+    // return new Promise(function(resolve, reject){
+    //     resolve(() => {
+    //         element.style.order = newOrder;
+    //         element.setAttribute('id', element.style.order);
+    //     });
+    //     reject((err)=>{
+    //         console.error(err);
+    //     });
+    // })
+
+    element.style.order = newOrder;
+    element.setAttribute('id', element.style.order);
+
 
 }

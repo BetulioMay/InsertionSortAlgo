@@ -34,7 +34,6 @@ $(document).ready(function() {
         else{
             console.log("Array is empty");
         }
-        
     });
     btn_reset.click(function() {
         if(arr.length > 0){

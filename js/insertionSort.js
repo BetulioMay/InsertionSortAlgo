@@ -51,10 +51,6 @@ function addElementToContainer(number, arr){
     new_element.setAttribute("class", "flex-item");        
     new_element.innerHTML = number.toString();
 
-    if(number >= 100){
-        $(new_element).css('font-size', '10px');
-    }
-
     setOrder(new_element, arr);
     new_element.setAttribute("id", new_element.style.order);
 

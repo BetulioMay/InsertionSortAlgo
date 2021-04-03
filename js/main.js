@@ -49,21 +49,6 @@ $(document).ready(function() {
     });
 
 
-
-
-
-    
-    // btn_add.addEventListener('click', function() {
-    //     addElement(1);
-    // });
-
-    // btn_clear.addEventListener('click', function() {
-    //     clearContainer(parent);
-    // })
-
-
-    // console.log(arr);
-
 });
 
 

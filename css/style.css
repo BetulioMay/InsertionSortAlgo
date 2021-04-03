@@ -90,6 +90,8 @@ body{
     grid-column: 2;
     
     font-family: Lobster-Regular;
+    font-family: 'Lobster', cursive;
+
     font-size: 50px;
     text-align: center;
     margin: 0 auto;
@@ -200,8 +202,6 @@ body{
 /* Footer's styles*/
 
 .footer{
-    display: grid;
-
     position: fixed;
     bottom: 0;
     left: 0;
@@ -213,4 +213,5 @@ body{
     color: rgb(196, 185, 185);
     text-align: end;
     font-family: Oswald-VariableFont_wght;
+    font-family: 'Oswald', sans-serif;
 }

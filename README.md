@@ -4,5 +4,5 @@
 
 A simple web page that sort a list of numbers using the Insertion Sort algorithm. Made with very simple HTML, CSS and JavaScript.
 
-This is a one-week project and it is way far from being such good as I expected, so feel free to give it an eye if you desire.
+This is a one-week project and it is way far from being such good as I expected. Nevertheless, feel free to give it an eye if you desire.
 Thx.

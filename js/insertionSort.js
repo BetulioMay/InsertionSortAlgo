@@ -51,6 +51,10 @@ function addElementToContainer(number, arr){
     new_element.setAttribute("class", "flex-item");        
     new_element.innerHTML = number.toString();
 
+    if(number >= 100){
+        $(new_element).css('font-size', '10px');
+    }
+
     setOrder(new_element, arr);
     new_element.setAttribute("id", new_element.style.order);
 
@@ -74,34 +78,7 @@ function setOrder(element, arr){
 
 function changeOrder(element, newOrder){
 
-    // let order_prom = new Promise(function(resolve, reject){
-    //     resolve();
-    //     reject();
-    // })
-
-    // order_prom.then(function(){
-
-    //     // setTimeout(function(){
-    //         element.style.order = newOrder;
-    //         element.setAttribute('id', element.style.order);
-    //     // }, 1000);
-
-    // }).catch(function(err){
-    //     console.error(err);
-    // });
-
-    // return new Promise(function(resolve, reject){
-    //     resolve(() => {
-    //         element.style.order = newOrder;
-    //         element.setAttribute('id', element.style.order);
-    //     });
-    //     reject((err)=>{
-    //         console.error(err);
-    //     });
-    // })
-
     element.style.order = newOrder;
     element.setAttribute('id', element.style.order);
-
 
 }

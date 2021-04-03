@@ -11,13 +11,13 @@ body{
 @keyframes addItem {
     from {
         font-size: 100px;
-        width: 130px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
     }
     to {
-        font-size: 70px;
-        width: 100px;
-        height: 100px;
+        font-size: 80px;
+        width: 140px;
+        height: 110px;
     }
 }
 @keyframes mouseOn{
@@ -95,14 +95,61 @@ body{
 
 #element_input{
     margin-top: 50px;
+    margin-left: 10px;
+    height: 65px;
+    width: 250px;
+    font-size: 25px;
+    outline: none;
+    
+}
+
+.grid-input{
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.grid-btn{
+    grid-row: 4;
+    grid-column: 2;
+}
+.btn_action{
+    width:300px;
+    height:70px;
+    margin: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    border-radius:30px;
+    border-color: aquamarine;
+    background-color: rgb(30, 6, 240);
+    color: #ccc;
+    text-shadow: 0 2px black;
+    cursor: pointer;
+    outline: none;
+}
+
+#btn_submit{
+    height: 80px;
+    width: 200px;
+    margin: 10px;
 }
 
 /* Container and items */
 
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto)
+}
+
 .flex-container{
     display: flex;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     height: 130px;
+
+    grid-row: 3;
+    grid-column: 1 / 4;
 }
 
 .flex-item{
@@ -112,8 +159,8 @@ body{
     border: 1px solid gray;
     margin: 15px;
     text-align: center;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: yellow;
     cursor: pointer;
 
@@ -129,6 +176,8 @@ body{
 /* Footer's styles*/
 
 .footer{
+    display: grid;
+
     position: fixed;
     bottom: 0;
     left: 0;

@@ -12,23 +12,30 @@
         <script src="js/insertionSort.js"></script>
         <script src="js/theme.js"></script>
 
-        <title>AlgoAnima</title>
+        <title>InsertionSort</title>
     </head>
     <body>
         <div class="mainHeader">
-            <div>Algo<span>Anima</span></div>
+            <div>Insertion<span>-Sort</span></div>
         </div>
 
+        <div class="wrapper">
+
         <section class="flex-container"></section>
-        <form action="#">
-            <input type="number" id="element_input" />
-            <button type="submit" id="btn_submit">Submit</button>
-        </form>
-        <br>
 
+        <div class="grid-input">
+            <form action="#">
+                <input type="text" id="element_input" placeholder="Enter a number" pattern="[0-9]+"/>
+                <button type="submit" class="btn_action"id="btn_submit">Submit</button>
+            </form>
+        </div>
 
-        <button type="submit" id="btn_sort">Sort</button>
-        <button type="button" id="btn_reset">Reset</button>
+        <div class="grid-btn">
+            <button type="submit" class="btn_action" id="btn_sort" title="Insert a number" aria-placeholder="enter input">Sort</button>
+            <button type="button" class="btn_action" id="btn_reset">Reset</button>
+        </div>
+
+        </div>
 
         <footer class="footer">By Cesar A. Mayora</footer>
         <script src="js/main.js"></script>

@@ -132,6 +132,14 @@ body{
     
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {         /* Hide spinner buttons */
+  -webkit-appearance: none; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .grid-input{
     grid-row: 4;
     grid-column: 1;

@@ -53,8 +53,14 @@ function addElementToContainer(number, arr){
 
     setOrder(new_element, arr);
     new_element.setAttribute("id", new_element.style.order);
-
+    
     document.querySelector(".flex-container").append(new_element);
+
+    new_element.style.animation = "addItem 0.5s forwards";
+
+    setTimeout(function() {
+        new_element.style.animation = "";
+    },500);
 }
 
 function clearContainer(parent){

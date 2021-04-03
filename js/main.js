@@ -1,5 +1,4 @@
 
-// var darkColor = "rgb(9, 9, 61,1)"
 var bod = $('body');
 
 $(document).ready(function() {
@@ -24,6 +23,7 @@ $(document).ready(function() {
         }
         
         input.val("");
+
     });
     
     btn_sort.click(function() {
@@ -46,8 +46,7 @@ $(document).ready(function() {
             console.log("The array is already empty");
             console.log(arr);
         }
-    });
-
+    });    
 
 });
 

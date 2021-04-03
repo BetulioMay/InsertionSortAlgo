@@ -7,37 +7,39 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/fonts.css" />
         <script src="js/jquery-3.6.0.js"></script>
+        <script src="https://kit.fontawesome.com/6386c7cd66.js" crossorigin="anonymous"></script>
         
         <script src="js/classes.js"></script>
         <script src="js/insertionSort.js"></script>
-        <script src="js/theme.js"></script>
-
+        
         <title>InsertionSort</title>
     </head>
     <body>
-        <div class="mainHeader">
-            <div>Insertion<span>-Sort</span></div>
-        </div>
-
         <div class="wrapper">
-
-        <section class="flex-container"></section>
-
-        <div class="grid-input">
-            <form action="#">
-                <input type="text" id="element_input" placeholder="Enter a number" pattern="[0-9]+"/>
-                <button type="submit" class="btn_action"id="btn_submit">Submit</button>
-            </form>
+            <div class="mainHeader">
+                <div>Insertion<span>-Sort</span></div>
+                <i class="far fa-moon" id="toggle-switcher"></i>
+            </div>
+            
+            
+            <section class="flex-container"></section>
+            
+            <div class="grid-input">
+                <form action="#">
+                    <input type="number" id="element_input" placeholder="Enter a number" pattern="[0-9]+"/>
+                    <button type="submit" class="btn_action"id="btn_submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="grid-btn">
+                <button type="submit" class="btn_action" id="btn_sort" title="Insert a number" aria-placeholder="enter input">Sort</button>
+                <button type="button" class="btn_action" id="btn_reset">Reset</button>
+            </div>
+            
         </div>
-
-        <div class="grid-btn">
-            <button type="submit" class="btn_action" id="btn_sort" title="Insert a number" aria-placeholder="enter input">Sort</button>
-            <button type="button" class="btn_action" id="btn_reset">Reset</button>
-        </div>
-
-        </div>
-
+        
         <footer class="footer">By Cesar A. Mayora</footer>
+        <script src="js/theme.js"></script>
         <script src="js/main.js"></script>
     </body>
-</html>
+    </html>
